@@ -23,5 +23,8 @@ public class Pozicioni {
         this.col = col;
     }
 
+    public Pozicioni translate(int dRow, int dCol) {
+        return new Pozicioni(row + dRow, col + dCol);
+    }
 
 }

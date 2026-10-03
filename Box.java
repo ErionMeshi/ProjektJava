@@ -18,9 +18,29 @@ public class Box {
         player = null;
     }
 
-    @Override
-    public String toString() {
-        return player.toString();
+    public boolean canBePlacedOver(Box other) {
+        return true;
     }
+
+    public boolean canEnter() {
+        return true;
+    }
+
+    public String getBlockedMessage() {
+        return "Nuk mund te kalosh ketu.";
+    }
+
+      public String getSymbol() {
+        return "   ";
+    }
+
+    public String onEnter(Player player) {
+        return "Playeri ka hyre ne kutine.";
+    }
+
+   @Override
+    public String toString() {
+    return player == null ? getSymbol() : player.toString();}
+    
     
 }
