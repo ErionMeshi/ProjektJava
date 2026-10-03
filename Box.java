@@ -9,7 +9,17 @@ public class Box {
         this.player = player;
     }
 
-    
+    public boolean isEmpty() {
+        return player == null;
+    }
 
+    public void clear(){
+        player = null;
+    }
+
+    @Override
+    public String toString() {
+        return player.toString();
+    }
     
 }

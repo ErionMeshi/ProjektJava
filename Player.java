@@ -6,7 +6,6 @@ class Player{
         return figura;
     }
 
-
     @Override 
     public String toString() {
         return getFigura();
