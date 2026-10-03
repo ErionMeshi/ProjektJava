@@ -2,6 +2,7 @@ public class Board {
 
     
     private Box[][] boxes;
+    private Pozicioni currentPosition;
 
     public Board() {
         boxes = new Box[4][4];
@@ -13,13 +14,18 @@ public class Board {
         }
     }
 
-    public void setPlayer(int row, int col, Player player) {
-        boxes[row][col].setPlayer(player);
+    public void setPlayer(Pozicioni position, Player player) {
+        Box box = getBox(position);
+        box.setPlayer(player);
+        currentPosition = position;
     }
 
-    public Box getBox(int row, int col) {
-        return boxes[row][col];
+    public Box getBox(Pozicioni position) {
+        return boxes[position.getRow()][position.getCol()];
     }
+
+
+
 
     @Override 
     public String toString() {
@@ -34,4 +40,6 @@ public class Board {
         }
         return sb.toString();
     }
+
+
 }

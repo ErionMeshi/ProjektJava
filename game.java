@@ -6,8 +6,8 @@ public class game {
         Board b = new Board();
 
         Player p1 = new Player();
-
-        b.setPlayer(1, 1, p1);
+        Pozicioni pos1 = new Pozicioni(1, 1);
+        b.setPlayer(pos1, p1);
         System.out.println(b.toString());
     }
 }

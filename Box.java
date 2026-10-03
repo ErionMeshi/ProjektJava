@@ -1,5 +1,6 @@
 public class Box {
     private Player player;
+    
 
     public Player getPlayer() {
         return player;
